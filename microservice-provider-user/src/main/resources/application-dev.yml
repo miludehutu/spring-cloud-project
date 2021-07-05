@@ -1,7 +1,10 @@
+
 server:
   port: 8080
 
 spring:
+  application:
+    name: microservice-provider-user
   datasource:
     username: root
     password: root
@@ -21,5 +24,6 @@ logging:
 #指定注册中心地址
 eureka:
   client:
-    serviceUrl:
-      defaultZone: http://localhost:7001/eureka/
+    service-url:
+      defaultZone: http://localhost:6001/eureka
+

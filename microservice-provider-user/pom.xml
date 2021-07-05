@@ -33,7 +33,11 @@
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
-
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+            <version>1.4.0.RELEASE</version>
+        </dependency>
 
         <!--配置中心jar包-->
         <dependency>
