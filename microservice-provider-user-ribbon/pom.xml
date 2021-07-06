@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.microservice</groupId>
-    <artifactId>microservice-provider-user</artifactId>
+    <artifactId>microservice-provider-user-ribbon</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>microservice-provider-user</name>
     <description>Demo project for Spring Boot</description>
@@ -41,17 +41,17 @@
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
             <version>1.4.0.RELEASE</version>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-ribbon</artifactId>
-        </dependency>
+
         <!--配置中心jar包-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-config-server</artifactId>
             <version>1.4.3.RELEASE</version>
         </dependency>
-
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-ribbon</artifactId>
+        </dependency>
         <!--连接msql数据库相关jar包-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -109,7 +109,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>1.4.3.RELEASE</version>
                 <configuration>
-                    <mainClass>com.microservice.MicroserviceProviderUserApplication</mainClass>
+                    <mainClass>com.microservice.MicroserviceProviderUserRibbonApplication</mainClass>
                 </configuration>
                 <executions>
                     <execution>

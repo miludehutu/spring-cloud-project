@@ -34,11 +34,11 @@ public class UserController {
     @GetMapping("/user/{id}")
     public User findById(@PathVariable int id){
 
-        return this.restTemplate.getForObject("http://microservice-provider-user/test/getUser/"+id,User.class);
+        return this.restTemplate.getForObject("http://microservice-provider-user-ribbon/test/getUser/"+id,User.class);
     }
     @GetMapping("/log-instance")
     public void logUserInstance(){
-        ServiceInstance serviceInstance=this.loadBalancerClient.choose("microservice-provider-user");
+        ServiceInstance serviceInstance=this.loadBalancerClient.choose("microservice-provider-user-ribbon");
         UserController.LOGGER.info("{}:{}:{}",serviceInstance.getServiceId(),serviceInstance.getHost(),serviceInstance.getPort());
     }
 }

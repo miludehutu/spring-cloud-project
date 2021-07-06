@@ -12,15 +12,16 @@ import org.springframework.web.client.RestTemplate;
 @MapperScan("com.microservice.mapper") //扫描的mapper
 @SpringBootApplication
 @EnableDiscoveryClient
-public class MicroserviceProviderUserApplication {
-        @Bean
-        @LoadBalanced
-        public RestTemplate restTemplate(){
-                return  new RestTemplate();
-        }
+public class MicroserviceProviderUserRibbonApplication {
+
+@Bean
+@LoadBalanced
+ public RestTemplate restTemplate(){
+        return  new RestTemplate();
+}
 
 public static void main(String[] args) {
-        SpringApplication.run(MicroserviceProviderUserApplication.class, args);
+        SpringApplication.run(MicroserviceProviderUserRibbonApplication.class, args);
         }
 
         }
