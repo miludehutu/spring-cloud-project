@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
 
-@MapperScan("com.microservice.mapper") //扫描的mapper
+@MapperScan("com.microservice.mapper") //扫描的mapper测试
 @SpringBootApplication
 @EnableDiscoveryClient
 public class MicroserviceProviderUserRibbonApplication {
